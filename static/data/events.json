@@ -1,0 +1,182 @@
+[
+    {
+      "id": "technology",
+      "parent": null,
+      "name": "Technology",
+      "year": 1800,
+      "category": "root",
+      "annotation": "",
+      "wiki_link": ""
+    },
+    {
+      "id": "telegraph",
+      "parent": "technology",
+      "name": "Telegraph",
+      "year": 1837,
+      "category": "device",
+      "annotation": "First Practical Telegraph by Samuel Morse",
+      "wiki_link": "https://en.wikipedia.org/wiki/Telegraph"
+    },
+    {
+      "id": "telephone",
+      "parent": "telegraph",
+      "name": "Telephone",
+      "year": 1876,
+      "category": "device",
+      "annotation": "Alexander Graham Bell Patents the Telephone",
+      "wiki_link": "https://en.wikipedia.org/wiki/Telephone"
+    },
+    {
+      "id": "radio",
+      "parent": "technology",
+      "name": "Radio",
+      "year": 1895,
+      "category": "device",
+      "annotation": "Guglielmo Marconi Demonstrates Wireless Radio",
+      "wiki_link": "https://en.wikipedia.org/wiki/History_of_radio"
+    },
+    {
+      "id": "ham_radio",
+      "parent": "radio",
+      "name": "HAM Radio",
+      "year": 1910,
+      "category": "technology",
+      "annotation": "Rise of Amateur Radio Operators",
+      "wiki_link": "https://en.wikipedia.org/wiki/Amateur_radio"
+    },
+    {
+      "id": "911_hotline",
+      "parent": "telephone",
+      "name": "911 Hotline",
+      "year": 1968,
+      "category": "milestone",
+      "annotation": "Introduction of 911 Emergency Services in the US",
+      "wiki_link": "https://en.wikipedia.org/wiki/911_(emergency_telephone_number)"
+    },
+    {
+      "id": "mobile",
+      "parent": "telephone",
+      "name": "Mobile Phone",
+      "year": 1973,
+      "category": "device",
+      "annotation": "First Mobile Phone Call by Martin Cooper",
+      "wiki_link": "https://en.wikipedia.org/wiki/History_of_mobile_phones"
+    },
+    {
+      "id": "sms",
+      "parent": "mobile",
+      "name": "SMS",
+      "year": 1992,
+      "category": "technology",
+      "annotation": "First SMS Sent: 'Merry Christmas'",
+      "wiki_link": "https://en.wikipedia.org/wiki/SMS"
+    },
+    {
+      "id": "cellphones_internet",
+      "parent": "mobile",
+      "name": "Cellphones Meet the Internet",
+      "year": 1999,
+      "category": "milestone",
+      "annotation": "First Internet-Enabled Cellphone (Nokia 7110)",
+      "wiki_link": "https://en.wikipedia.org/wiki/Nokia_7110"
+    },
+    {
+      "id": "internet_era",
+      "parent": "technology",
+      "name": "Internet Era",
+      "year": 1990,
+      "category": "era",
+      "annotation": "World Wide Web Introduced by Tim Berners-Lee",
+      "wiki_link": "https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web"
+    },
+    {
+      "id": "voip",
+      "parent": "internet_era",
+      "name": "VoIP",
+      "year": 1995,
+      "category": "technology",
+      "annotation": "First VoIP Software (VocalTec) Released",
+      "wiki_link": "https://en.wikipedia.org/wiki/Voice_over_IP"
+    },
+    {
+      "id": "smartphone",
+      "parent": "mobile",
+      "name": "Smartphone",
+      "year": 2007,
+      "category": "device",
+      "annotation": "First iPhone Released",
+      "wiki_link": "https://en.wikipedia.org/wiki/IPhone_(1st_generation)"
+    },
+    {
+      "id": "mobile_apps",
+      "parent": "smartphone",
+      "name": "Mobile Apps",
+      "year": 2008,
+      "category": "impact",
+      "annotation": "App Store Launched",
+      "wiki_link": "https://en.wikipedia.org/wiki/App_Store"
+    },
+    {
+      "id": "tablet",
+      "parent": "mobile",
+      "name": "Tablet",
+      "year": 2010,
+      "category": "device",
+      "annotation": "First iPad Released",
+      "wiki_link": "https://en.wikipedia.org/wiki/IPad_(1st_generation)"
+    },
+    {
+      "id": "mobile_banking",
+      "parent": "smartphone",
+      "name": "Mobile Banking",
+      "year": 2010,
+      "category": "impact",
+      "annotation": "Mobile Banking Apps Launched",
+      "wiki_link": "https://en.wikipedia.org/wiki/Mobile_banking"
+    },
+    {
+      "id": "mobile_gaming",
+      "parent": "smartphone",
+      "name": "Mobile Gaming",
+      "year": 2012,
+      "category": "impact",
+      "annotation": "Mobile Gaming Boom",
+      "wiki_link": "https://en.wikipedia.org/wiki/Mobile_gaming"
+    },
+    {
+      "id": "digital_assistants",
+      "parent": "smartphone",
+      "name": "Digital Assistants",
+      "year": 2011,
+      "category": "technology",
+      "annotation": "Apple Introduces Siri on iPhone 4S",
+      "wiki_link": "https://en.wikipedia.org/wiki/Siri"
+    },
+    {
+      "id": "wearable",
+      "parent": "mobile",
+      "name": "Wearable",
+      "year": 2015,
+      "category": "device",
+      "annotation": "First Apple Watch Released",
+      "wiki_link": "https://en.wikipedia.org/wiki/Apple_Watch"
+    },
+    {
+      "id": "5g",
+      "parent": "smartphone",
+      "name": "5G",
+      "year": 2019,
+      "category": "tech",
+      "annotation": "5G Networks Launched",
+      "wiki_link": "https://en.wikipedia.org/wiki/5G"
+    },
+    {
+      "id": "ai_voice_modeling",
+      "parent": "digital_assistants",
+      "name": "AI Voice Modeling",
+      "year": 2023,
+      "category": "technology",
+      "annotation": "Advancements in AI-Driven Voice Synthesis",
+      "wiki_link": "https://en.wikipedia.org/wiki/Speech_synthesis"
+    }
+  ]
