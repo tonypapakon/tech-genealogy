@@ -1,3 +1,5 @@
 venv/
 node_modules
 .qodo
+__pycache__/
+*.pyc

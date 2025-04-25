@@ -6,13 +6,29 @@
   <!-- point at the right CSS filename -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
   <!-- D3.js -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>    
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/logo_tech-genealogy.png') }}">
 </head>
 <body>
+  <!-- Query input -->
+  <div class="apple-search-wrapper" style="position:absolute;top:10px;left:0;right:0;margin:auto;z-index:10;">
+  <input id="query" type="text" class="apple-search" placeholder="Search technology tree">
+  <button class="apple-search-btn" onclick="runQuery()" type="button">
+    <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2">
+      <circle cx="9" cy="9" r="7"/>
+      <line x1="15" y1="15" x2="19" y2="19"/>
+    </svg>
+  </button>
+</div>
   <!-- tree -->
   <div id="tree" style="width:100vw; height:100vh;"></div>
-
-  <!-- then load the tree script -->
+  <!-- Load scripts -->
   <script src="{{ url_for('static', filename='js/tree.js') }}"></script>
+  <script>
+    function runQuery() {
+      const query = document.getElementById('query').value;
+      window.handleNaturalLanguageQuery(query);
+    }
+  </script>
 </body>
 </html>

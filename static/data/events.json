@@ -1,182 +1,479 @@
 [
-    {
-      "id": "technology",
-      "parent": null,
-      "name": "Technology",
-      "year": 1800,
-      "category": "root",
-      "annotation": "",
-      "wiki_link": ""
-    },
-    {
-      "id": "telegraph",
-      "parent": "technology",
-      "name": "Telegraph",
-      "year": 1837,
-      "category": "device",
-      "annotation": "First Practical Telegraph by Samuel Morse",
-      "wiki_link": "https://en.wikipedia.org/wiki/Telegraph"
-    },
-    {
-      "id": "telephone",
-      "parent": "telegraph",
-      "name": "Telephone",
-      "year": 1876,
-      "category": "device",
-      "annotation": "Alexander Graham Bell Patents the Telephone",
-      "wiki_link": "https://en.wikipedia.org/wiki/Telephone"
-    },
-    {
-      "id": "radio",
-      "parent": "technology",
-      "name": "Radio",
-      "year": 1895,
-      "category": "device",
-      "annotation": "Guglielmo Marconi Demonstrates Wireless Radio",
-      "wiki_link": "https://en.wikipedia.org/wiki/History_of_radio"
-    },
-    {
-      "id": "ham_radio",
-      "parent": "radio",
-      "name": "HAM Radio",
-      "year": 1910,
-      "category": "technology",
-      "annotation": "Rise of Amateur Radio Operators",
-      "wiki_link": "https://en.wikipedia.org/wiki/Amateur_radio"
-    },
-    {
-      "id": "911_hotline",
-      "parent": "telephone",
-      "name": "911 Hotline",
-      "year": 1968,
-      "category": "milestone",
-      "annotation": "Introduction of 911 Emergency Services in the US",
-      "wiki_link": "https://en.wikipedia.org/wiki/911_(emergency_telephone_number)"
-    },
-    {
-      "id": "mobile",
-      "parent": "telephone",
-      "name": "Mobile Phone",
-      "year": 1973,
-      "category": "device",
-      "annotation": "First Mobile Phone Call by Martin Cooper",
-      "wiki_link": "https://en.wikipedia.org/wiki/History_of_mobile_phones"
-    },
-    {
-      "id": "sms",
-      "parent": "mobile",
-      "name": "SMS",
-      "year": 1992,
-      "category": "technology",
-      "annotation": "First SMS Sent: 'Merry Christmas'",
-      "wiki_link": "https://en.wikipedia.org/wiki/SMS"
-    },
-    {
-      "id": "cellphones_internet",
-      "parent": "mobile",
-      "name": "Cellphones Meet the Internet",
-      "year": 1999,
-      "category": "milestone",
-      "annotation": "First Internet-Enabled Cellphone (Nokia 7110)",
-      "wiki_link": "https://en.wikipedia.org/wiki/Nokia_7110"
-    },
-    {
-      "id": "internet_era",
-      "parent": "technology",
-      "name": "Internet Era",
-      "year": 1990,
-      "category": "era",
-      "annotation": "World Wide Web Introduced by Tim Berners-Lee",
-      "wiki_link": "https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web"
-    },
-    {
-      "id": "voip",
-      "parent": "internet_era",
-      "name": "VoIP",
-      "year": 1995,
-      "category": "technology",
-      "annotation": "First VoIP Software (VocalTec) Released",
-      "wiki_link": "https://en.wikipedia.org/wiki/Voice_over_IP"
-    },
-    {
-      "id": "smartphone",
-      "parent": "mobile",
-      "name": "Smartphone",
-      "year": 2007,
-      "category": "device",
-      "annotation": "First iPhone Released",
-      "wiki_link": "https://en.wikipedia.org/wiki/IPhone_(1st_generation)"
-    },
-    {
-      "id": "mobile_apps",
-      "parent": "smartphone",
-      "name": "Mobile Apps",
-      "year": 2008,
-      "category": "impact",
-      "annotation": "App Store Launched",
-      "wiki_link": "https://en.wikipedia.org/wiki/App_Store"
-    },
-    {
-      "id": "tablet",
-      "parent": "mobile",
-      "name": "Tablet",
-      "year": 2010,
-      "category": "device",
-      "annotation": "First iPad Released",
-      "wiki_link": "https://en.wikipedia.org/wiki/IPad_(1st_generation)"
-    },
-    {
-      "id": "mobile_banking",
-      "parent": "smartphone",
-      "name": "Mobile Banking",
-      "year": 2010,
-      "category": "impact",
-      "annotation": "Mobile Banking Apps Launched",
-      "wiki_link": "https://en.wikipedia.org/wiki/Mobile_banking"
-    },
-    {
-      "id": "mobile_gaming",
-      "parent": "smartphone",
-      "name": "Mobile Gaming",
-      "year": 2012,
-      "category": "impact",
-      "annotation": "Mobile Gaming Boom",
-      "wiki_link": "https://en.wikipedia.org/wiki/Mobile_gaming"
-    },
-    {
-      "id": "digital_assistants",
-      "parent": "smartphone",
-      "name": "Digital Assistants",
-      "year": 2011,
-      "category": "technology",
-      "annotation": "Apple Introduces Siri on iPhone 4S",
-      "wiki_link": "https://en.wikipedia.org/wiki/Siri"
-    },
-    {
-      "id": "wearable",
-      "parent": "mobile",
-      "name": "Wearable",
-      "year": 2015,
-      "category": "device",
-      "annotation": "First Apple Watch Released",
-      "wiki_link": "https://en.wikipedia.org/wiki/Apple_Watch"
-    },
-    {
-      "id": "5g",
-      "parent": "smartphone",
-      "name": "5G",
-      "year": 2019,
-      "category": "tech",
-      "annotation": "5G Networks Launched",
-      "wiki_link": "https://en.wikipedia.org/wiki/5G"
-    },
-    {
-      "id": "ai_voice_modeling",
-      "parent": "digital_assistants",
-      "name": "AI Voice Modeling",
-      "year": 2023,
-      "category": "technology",
-      "annotation": "Advancements in AI-Driven Voice Synthesis",
-      "wiki_link": "https://en.wikipedia.org/wiki/Speech_synthesis"
-    }
-  ]
+  {
+    "id": "technology",
+    "parent": null,
+    "name": "Technology",
+    "year": 1800,
+    "category": "root",
+    "annotation": "",
+    "wiki_link": ""
+  },
+  {
+    "id": "telegraph",
+    "parent": "technology",
+    "name": "Telegraph",
+    "year": 1837,
+    "category": "device",
+    "annotation": "First Practical Telegraph by Samuel Morse",
+    "wiki_link": "https://en.wikipedia.org/wiki/Telegraph"
+  },
+  {
+    "id": "telephone",
+    "parent": "telegraph",
+    "name": "Telephone",
+    "year": 1876,
+    "category": "device",
+    "annotation": "Alexander Graham Bell Patents the Telephone",
+    "wiki_link": "https://en.wikipedia.org/wiki/Telephone"
+  },
+  {
+    "id": "radio",
+    "parent": "technology",
+    "name": "Radio",
+    "year": 1895,
+    "category": "device",
+    "annotation": "Guglielmo Marconi Demonstrates Wireless Radio",
+    "wiki_link": "https://en.wikipedia.org/wiki/History_of_radio"
+  },
+  {
+    "id": "ham_radio",
+    "parent": "radio",
+    "name": "HAM Radio",
+    "year": 1910,
+    "category": "technology",
+    "annotation": "Rise of Amateur Radio Operators",
+    "wiki_link": "https://en.wikipedia.org/wiki/Amateur_radio"
+  },
+  {
+    "id": "mobile",
+    "parent": "telephone",
+    "name": "Mobile Phone",
+    "year": 1973,
+    "category": "device",
+    "annotation": "First Mobile Phone Call by Martin Cooper",
+    "wiki_link": "https://en.wikipedia.org/wiki/History_of_mobile_phones"
+  },
+  {
+    "id": "sms",
+    "parent": "mobile",
+    "name": "SMS",
+    "year": 1992,
+    "category": "technology",
+    "annotation": "First SMS Sent: 'Merry Christmas'",
+    "wiki_link": "https://en.wikipedia.org/wiki/SMS"
+  },
+  {
+    "id": "cellphones_internet",
+    "parent": "mobile",
+    "name": "Cellphones Meet the Internet",
+    "year": 1999,
+    "category": "milestone",
+    "annotation": "First Internet-Enabled Cellphone (Nokia 7110)",
+    "wiki_link": "https://en.wikipedia.org/wiki/Nokia_7110"
+  },
+  {
+    "id": "internet_era",
+    "parent": "technology",
+    "name": "Internet Era",
+    "year": 1990,
+    "category": "era",
+    "annotation": "World Wide Web Introduced by Tim Berners-Lee",
+    "wiki_link": "https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web"
+  },
+  {
+    "id": "voip",
+    "parent": "internet_era",
+    "name": "VoIP",
+    "year": 1995,
+    "category": "technology",
+    "annotation": "First VoIP Software (VocalTec) Released",
+    "wiki_link": "https://en.wikipedia.org/wiki/Voice_over_IP"
+  },
+  {
+    "id": "smartphone",
+    "parent": "mobile",
+    "name": "Smartphone",
+    "year": 2007,
+    "category": "device",
+    "annotation": "First iPhone Released",
+    "wiki_link": "https://en.wikipedia.org/wiki/IPhone_(1st_generation)"
+  },
+  {
+    "id": "mobile_apps",
+    "parent": "smartphone",
+    "name": "Mobile Apps",
+    "year": 2008,
+    "category": "impact",
+    "annotation": "App Store Launched",
+    "wiki_link": "https://en.wikipedia.org/wiki/App_Store"
+  },
+  {
+    "id": "tablet",
+    "parent": "mobile",
+    "name": "Tablet",
+    "year": 2010,
+    "category": "device",
+    "annotation": "First iPad Released",
+    "wiki_link": "https://en.wikipedia.org/wiki/IPad_(1st_generation)"
+  },
+  {
+    "id": "mobile_gaming",
+    "parent": "smartphone",
+    "name": "Mobile Gaming",
+    "year": 2012,
+    "category": "impact",
+    "annotation": "Mobile Gaming Boom",
+    "wiki_link": "https://en.wikipedia.org/wiki/Mobile_gaming"
+  },
+  {
+    "id": "digital_assistants",
+    "parent": "smartphone",
+    "name": "Digital Assistants",
+    "year": 2011,
+    "category": "technology",
+    "annotation": "Apple Introduces Siri on iPhone 4S",
+    "wiki_link": "https://en.wikipedia.org/wiki/Siri"
+  },
+  {
+    "id": "wearable",
+    "parent": "mobile",
+    "name": "Wearable",
+    "year": 2015,
+    "category": "device",
+    "annotation": "First Apple Watch Released",
+    "wiki_link": "https://en.wikipedia.org/wiki/Apple_Watch"
+  },
+  {
+    "id": "5g",
+    "parent": "smartphone",
+    "name": "5G",
+    "year": 2019,
+    "category": "tech",
+    "annotation": "5G Networks Launched",
+    "wiki_link": "https://en.wikipedia.org/wiki/5G"
+  },
+  {
+    "id": "ai_voice_modeling",
+    "parent": "digital_assistants",
+    "name": "AI Voice Modeling",
+    "year": 2023,
+    "category": "technology",
+    "annotation": "Advancements in AI-Driven Voice Synthesis",
+    "wiki_link": "https://en.wikipedia.org/wiki/Speech_synthesis"
+  },
+  {
+    "id": "ai_assistants",
+    "parent": "digital_assistants",
+    "name": "AI Assistants",
+    "year": 2023,
+    "category": "technology",
+    "annotation": "Rise of AI-Powered Virtual Assistants",
+    "wiki_link": "https://en.wikipedia.org/wiki/Virtual_assistant"
+  },
+  {
+    "id": "metaverse",
+    "parent": "technology",
+    "name": "Metaverse",
+    "year": 2023,
+    "category": "era",
+    "annotation": "Emergence of the Metaverse Concept",
+    "wiki_link": ""
+  },
+  {
+    "id": "fax_machine",
+    "parent": "telephone",
+    "name": "Fax Machine",
+    "year": 1964,
+    "category": "device",
+    "annotation": "First commercial fax machine introduced by Xerox",
+    "wiki_link": "https://en.wikipedia.org/wiki/Fax"
+  },
+  {
+    "id": "pager",
+    "parent": "mobile",
+    "name": "Pager",
+    "year": 1950,
+    "category": "device",
+    "annotation": "Introduction of the first personal pager",
+    "wiki_link": "https://en.wikipedia.org/wiki/Pager"
+  },
+  {
+    "id": "satellite_phone",
+    "parent": "mobile",
+    "name": "Satellite Phone",
+    "year": 1989,
+    "category": "device",
+    "annotation": "First satellite phone call made",
+    "wiki_link": "https://en.wikipedia.org/wiki/Satellite_phone"
+  },
+  {
+    "id": "bluetooth",
+    "parent": "mobile",
+    "name": "Bluetooth",
+    "year": 1999,
+    "category": "technology",
+    "annotation": "Bluetooth wireless technology introduced",
+    "wiki_link": "https://en.wikipedia.org/wiki/Bluetooth"
+  },
+  {
+    "id": "android",
+    "parent": "smartphone",
+    "name": "Android OS",
+    "year": 2008,
+    "category": "technology",
+    "annotation": "First Android smartphone released (HTC Dream)",
+    "wiki_link": "https://en.wikipedia.org/wiki/Android_(operating_system)"
+  },
+  {
+    "id": "app_store_google_play",
+    "parent": "mobile_apps",
+    "name": "Google Play Store",
+    "year": 2012,
+    "category": "impact",
+    "annotation": "Google Play Store launched for Android devices",
+    "wiki_link": "https://en.wikipedia.org/wiki/Google_Play"
+  },
+  {
+    "id": "mobile_payment",
+    "parent": "smartphone",
+    "name": "Mobile Payment",
+    "year": 2014,
+    "category": "impact",
+    "annotation": "Apple Pay launched, popularizing mobile payments",
+    "wiki_link": "https://en.wikipedia.org/wiki/Mobile_payment"
+  },
+  {
+    "id": "qr_code",
+    "parent": "mobile",
+    "name": "QR Code",
+    "year": 1994,
+    "category": "technology",
+    "annotation": "QR code invented in Japan for tracking vehicles",
+    "wiki_link": "https://en.wikipedia.org/wiki/QR_code"
+  },
+  {
+    "id": "touchscreen",
+    "parent": "smartphone",
+    "name": "Capacitive Touchscreen",
+    "year": 2007,
+    "category": "technology",
+    "annotation": "iPhone popularizes capacitive touchscreen technology",
+    "wiki_link": "https://en.wikipedia.org/wiki/Touchscreen"
+  },
+  {
+    "id": "cloud_storage",
+    "parent": "internet_era",
+    "name": "Cloud Storage",
+    "year": 2006,
+    "category": "technology",
+    "annotation": "Amazon launches AWS S3, pioneering cloud storage",
+    "wiki_link": "https://en.wikipedia.org/wiki/Cloud_storage"
+  },
+  {
+    "id": "morse_code",
+    "parent": "telegraph",
+    "name": "Morse Code",
+    "year": 1838,
+    "category": "technology",
+    "annotation": "Samuel Morse invents Morse Code for telegraphy",
+    "wiki_link": "https://en.wikipedia.org/wiki/Morse_code"
+  },
+  {
+    "id": "rotary_phone",
+    "parent": "telephone",
+    "name": "Rotary Dial Telephone",
+    "year": 1891,
+    "category": "device",
+    "annotation": "First patent for rotary dial telephone",
+    "wiki_link": "https://en.wikipedia.org/wiki/Rotary_dial"
+  },
+  {
+    "id": "transistor",
+    "parent": "technology",
+    "name": "Transistor",
+    "year": 1947,
+    "category": "technology",
+    "annotation": "Invention of the transistor at Bell Labs",
+    "wiki_link": "https://en.wikipedia.org/wiki/Transistor"
+  },
+  {
+    "id": "color_tv",
+    "parent": "radio",
+    "name": "Color Television",
+    "year": 1954,
+    "category": "device",
+    "annotation": "First commercial color TV set sold in the US",
+    "wiki_link": "https://en.wikipedia.org/wiki/Color_television"
+  },
+  {
+    "id": "mainframe",
+    "parent": "technology",
+    "name": "Mainframe Computer",
+    "year": 1951,
+    "category": "device",
+    "annotation": "UNIVAC I, the first commercial mainframe computer",
+    "wiki_link": "https://en.wikipedia.org/wiki/UNIVAC_I"
+  },
+  {
+    "id": "walkman",
+    "parent": "mobile",
+    "name": "Sony Walkman",
+    "year": 1979,
+    "category": "device",
+    "annotation": "Sony releases the first portable cassette player",
+    "wiki_link": "https://en.wikipedia.org/wiki/Walkman"
+  },
+  {
+    "id": "cd",
+    "parent": "technology",
+    "name": "Compact Disc (CD)",
+    "year": 1982,
+    "category": "technology",
+    "annotation": "First commercial audio CD released",
+    "wiki_link": "https://en.wikipedia.org/wiki/Compact_disc"
+  },
+  {
+    "id": "sms_standardization",
+    "parent": "sms",
+    "name": "SMS Standardization",
+    "year": 1993,
+    "category": "milestone",
+    "annotation": "GSM standardizes SMS for global use",
+    "wiki_link": "https://en.wikipedia.org/wiki/Short_Message_Service"
+  },
+  {
+    "id": "wifi",
+    "parent": "internet_era",
+    "name": "Wi-Fi",
+    "year": 1997,
+    "category": "technology",
+    "annotation": "IEEE 802.11 standard for wireless networking",
+    "wiki_link": "https://en.wikipedia.org/wiki/Wi-Fi"
+  },
+  {
+    "id": "usb",
+    "parent": "technology",
+    "name": "USB",
+    "year": 1996,
+    "category": "technology",
+    "annotation": "Universal Serial Bus (USB) standard introduced",
+    "wiki_link": "https://en.wikipedia.org/wiki/USB"
+  },
+  {
+    "id": "mp3_player",
+    "parent": "mobile",
+    "name": "MP3 Player",
+    "year": 1998,
+    "category": "device",
+    "annotation": "First portable MP3 player released",
+    "wiki_link": "https://en.wikipedia.org/wiki/MP3_player"
+  },
+  {
+    "id": "touch_id",
+    "parent": "smartphone",
+    "name": "Touch ID",
+    "year": 2013,
+    "category": "technology",
+    "annotation": "Apple introduces fingerprint authentication on iPhone",
+    "wiki_link": "https://en.wikipedia.org/wiki/Touch_ID"
+  },
+  {
+    "id": "face_id",
+    "parent": "smartphone",
+    "name": "Face ID",
+    "year": 2017,
+    "category": "technology",
+    "annotation": "Apple introduces facial recognition on iPhone X",
+    "wiki_link": "https://en.wikipedia.org/wiki/Face_ID"
+  },
+  {
+    "id": "starlink",
+    "parent": "internet_era",
+    "name": "Starlink",
+    "year": 2020,
+    "category": "technology",
+    "annotation": "SpaceX launches Starlink satellite internet service",
+    "wiki_link": "https://en.wikipedia.org/wiki/Starlink"
+  },
+  {
+    "id": "battery",
+    "parent": "technology",
+    "name": "Voltaic Pile (Battery)",
+    "year": 1800,
+    "category": "device",
+    "annotation": "Alessandro Volta invents the first true battery",
+    "wiki_link": "https://en.wikipedia.org/wiki/Voltaic_pile"
+  },
+  {
+    "id": "photograph",
+    "parent": "technology",
+    "name": "First Photograph",
+    "year": 1826,
+    "category": "technology",
+    "annotation": "Nicéphore Niépce creates the first permanent photograph",
+    "wiki_link": "https://en.wikipedia.org/wiki/History_of_photography"
+  },
+  {
+    "id": "light_bulb",
+    "parent": "technology",
+    "name": "Incandescent Light Bulb",
+    "year": 1879,
+    "category": "device",
+    "annotation": "Thomas Edison invents the practical incandescent light bulb",
+    "wiki_link": "https://en.wikipedia.org/wiki/Incandescent_light_bulb"
+  },
+  {
+    "id": "phonograph",
+    "parent": "technology",
+    "name": "Phonograph",
+    "year": 1877,
+    "category": "device",
+    "annotation": "Thomas Edison invents the phonograph for sound recording",
+    "wiki_link": "https://en.wikipedia.org/wiki/Phonograph"
+  },
+  {
+    "id": "motion_picture",
+    "parent": "technology",
+    "name": "Motion Picture Camera",
+    "year": 1891,
+    "category": "device",
+    "annotation": "Thomas Edison and William Dickson invent the Kinetograph",
+    "wiki_link": "https://en.wikipedia.org/wiki/Motion_picture_camera"
+  },
+  {
+    "id": "vacuum_tube",
+    "parent": "technology",
+    "name": "Vacuum Tube",
+    "year": 1904,
+    "category": "technology",
+    "annotation": "John Ambrose Fleming invents the vacuum tube diode",
+    "wiki_link": "https://en.wikipedia.org/wiki/Vacuum_tube"
+  },
+  {
+    "id": "television",
+    "parent": "radio",
+    "name": "Television",
+    "year": 1927,
+    "category": "device",
+    "annotation": "Philo Farnsworth demonstrates the first electronic television",
+    "wiki_link": "https://en.wikipedia.org/wiki/History_of_television"
+  },
+  {
+    "id": "enigma_machine",
+    "parent": "technology",
+    "name": "Enigma Machine",
+    "year": 1920,
+    "category": "device",
+    "annotation": "Invention of the Enigma encryption machine",
+    "wiki_link": "https://en.wikipedia.org/wiki/Enigma_machine"
+  },
+  {
+    "id": "teletype",
+    "parent": "telegraph",
+    "name": "Teletype Machine",
+    "year": 1910,
+    "category": "device",
+    "annotation": "Development of the teletypewriter for automated telegraphy",
+    "wiki_link": "https://en.wikipedia.org/wiki/Teleprinter"
+  }
+]
