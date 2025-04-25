@@ -1,4 +1,8 @@
-# Technology Genealogy
+<h1 align="center">
+  <img src="static/icons/logo_tech-genealogy.png" alt="Logo" width="150" style="margin-bottom:20px;">
+  <br>
+  Technology Genealogy
+</h1>
 
 A web application that visualizes the genealogy of technology using D3.js and Flask. The project displays a timeline of technological events in an interactive tree format with clickable nodes for more information.
 
