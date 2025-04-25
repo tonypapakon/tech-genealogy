@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="static/icons/logo_tech-genealogy.png" alt="Logo" width="150" style="margin-bottom:20px;">
+  <img src="static/icons/logo_tech-genealogy.png" alt="Logo" width="200" style="margin-bottom:20px;">
   <br>
   Technology Genealogy
 </h1>
