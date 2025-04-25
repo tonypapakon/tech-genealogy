@@ -9,9 +9,10 @@ A web application that visualizes the genealogy of technology using D3.js and Fl
 ## Features
 
 - **Interactive Tree Visualization:** Visualize events in technology history laid out in a tree structure.
+- **Natural Language Search (LLM-powered):** Use natural language queries to find and highlight technologies. Powered by a local Large Language Model (LLM) via [Ollama](https://ollama.com/) (e.g., `phi`, `llama2`, or `mistral`).
 - **Clickable Nodes:** Click on a node to open its related Wikipedia page.
 - **Zoom and Pan:** Use mouse scroll and drag to zoom in/out and pan across the visualization.
-- **Responsive Design:** The visualization scales to fill the browser window.
+- **Responsive & Mobile-Friendly:** The visualization scales to fill the browser window and supports horizontal scrolling on mobile.
 
 ## Project Structure
 
@@ -27,6 +28,8 @@ tech-genealogy/
 │   │   └── tree.js     # D3.js script for rendering the tree visualization
 │   └── data/
 │       └── events.json # JSON data for technology events
+│   └── icons/
+│       └── logo_tech-genealogy.png # App logo/favicon
 └── README.md           # Project documentation (this file)
 ```
 
@@ -36,24 +39,36 @@ tech-genealogy/
 - Flask
 - livereload
 - D3.js (loaded via CDN in the HTML)
+- [Ollama](https://ollama.com/) (for local LLM-powered search, e.g., `phi`, `llama2`, or `mistral`)
 
 ## Setup and Running the Project
 
 1. **Install Python dependencies:**  
-   Open your terminal and run:
    ```bash
    pip install Flask livereload
    ```
 
-2. **Run the Application:**  
-   From the project root directory, run:
+2. **Install Ollama and Pull a Model:**  
+   - [Install Ollama](https://ollama.com/download)
+   - Pull a model (e.g., `phi`):  
+     ```bash
+     ollama pull phi
+     ```
+   - You can also use `llama2` or `mistral` for better results.
+
+3. **Run the Application:**  
    ```bash
    python app.py
    ```
    The server will start and serve the app at [http://127.0.0.1:5500](http://127.0.0.1:5500).
 
-3. **View in Browser:**  
-   Open your web browser and navigate to [http://127.0.0.1:5500](http://127.0.0.1:5500) to see the interactive technology genealogy tree.
+4. **View in Browser:**  
+   Open your browser and go to [http://127.0.0.1:5500](http://127.0.0.1:5500).
+
+5. **View on Mobile:**  
+   - Make sure your phone and computer are on the same Wi-Fi.
+   - Find your computer’s local IP (e.g., `192.168.x.x`).
+   - Open `http://192.168.x.x:5500` in your mobile browser.
 
 ## Customization
 
@@ -72,7 +87,8 @@ This project is open source.
 
 ## Acknowledgments
 
-- [D3.js](https://d3js.org/) for providing the powerful data visualization library.
-- [Flask](https://flask.palletsprojects.com/) for making it easy to create lightweight web applications.
-- Wikimedia and Wikipedia for the inspiration behind technology event data.
+- [D3.js](https://d3js.org/) for the visualization library.
+- [Flask](https://flask.palletsprojects.com/) for the web framework.
+- [Ollama](https://ollama.com/) for local LLM inference.
+- Wikimedia and Wikipedia for technology event data inspiration.
 
