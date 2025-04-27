@@ -1,5 +1,6 @@
 body, html {
-  margin: 0; padding: 0;
+  margin: 0; 
+  padding: 0;
   background-color: black;
   overflow: hidden;
 }
@@ -36,7 +37,7 @@ body, html {
 }
 
 .apple-search-wrapper {
-  width: 300px;
+  width: 400px;
   max-width: 90vw;
   position: relative;
   display: flex;
@@ -45,7 +46,7 @@ body, html {
 
 .apple-search {
   width: 100%;
-  padding: 12px 44px 12px 20px;
+  padding: 12px 44px 12px 60px;
   border: none;
   border-radius: 20px;
   background: #222;
@@ -63,7 +64,7 @@ body, html {
 
 .apple-search-btn {
   position: absolute;
-  right: 8px;
+  right: 15px;
   background: none;
   border: none;
   outline: none;
@@ -74,6 +75,7 @@ body, html {
   height: 100%;
   color: #aaa;
   transition: color 0.2s;
+  justify-content: center;
 }
 
 .apple-search-btn:hover,
@@ -81,3 +83,47 @@ body, html {
   color: #fff;
 }
 
+.modal {
+  position: fixed; 
+  z-index: 1000; 
+  left: 0; 
+  top: 0; 
+  width: 100vw; 
+  height: 100vh;
+  background: rgba(0,0,0,0.7); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.modal-content {
+  background: #222; 
+  color: #fff; 
+  padding: 2em; 
+  border-radius: 16px; 
+  min-width: 250px; 
+  max-width: 90vw;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute; 
+  top: 10px; 
+  right: 20px; 
+  font-size: 2em; 
+  cursor: pointer; 
+  color: #fff;
+}
+
+#modal-link { 
+  color: #4af; 
+  text-decoration: underline; 
+}
+
+.search-logo {
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  left: 9px;
+}

@@ -1,11 +1,16 @@
+import re
 import json
 
+def normalize(text):
+    return re.sub(r'[^a-z0-9]', '', text.lower())
+
 def load_and_filter_events(json_path, filter_dict):
-    with open(json_path, 'r') as f:
+    with open(json_path) as f:
         events = json.load(f)
-    results = []
-    topic = filter_dict.get('topic', '').lower()
-    for node in events:
-        if topic in node.get('name', '').lower() or topic in node.get('annotation', '').lower():
-            results.append(node['id'])
-    return results
+    topics = filter_dict.get("topics", [])
+    def matches(event):
+        name = normalize(event.get("name", ""))
+        category = normalize(event.get("category", ""))
+        return any(normalize(topic) in name or normalize(topic) in category for topic in topics)
+    matching_ids = [event["id"] for event in events if matches(event)]
+    return matching_ids

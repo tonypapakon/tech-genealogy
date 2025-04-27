@@ -12,6 +12,7 @@
 <body>
   <!-- Query input -->
   <div class="apple-search-wrapper" style="position:absolute;top:10px;left:0;right:0;margin:auto;z-index:10;">
+  <img src="{{ url_for('static', filename='icons/logo_tech-genealogy.png') }}" alt="Logo" class="search-logo">
   <input id="query" type="text" class="apple-search" placeholder="Search technology tree">
   <button class="apple-search-btn" onclick="runQuery()" type="button">
     <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2">
@@ -25,10 +26,26 @@
   <!-- Load scripts -->
   <script src="{{ url_for('static', filename='js/tree.js') }}"></script>
   <script>
-    function runQuery() {
-      const query = document.getElementById('query').value;
-      window.handleNaturalLanguageQuery(query);
-    }
-  </script>
+  function runQuery() {
+    const query = document.getElementById('query').value;
+    window.handleNaturalLanguageQuery(query);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('query').addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        runQuery();
+      }
+    });
+  });
+</script>
+  <div id="node-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-annotation"></p>
+    <a id="modal-link" href="#" target="_blank">Read more</a>
+  </div>
+</div>
 </body>
 </html>

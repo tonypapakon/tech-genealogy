@@ -1,5 +1,7 @@
 // immediately-invoked so our vars don’t leak
 (function(){
+  let root;
+
   const margin = { top: 50, right: 50, bottom: 50, left: 150 };
   const fullW  = window.innerWidth;
   const fullH  = window.innerHeight;
@@ -10,14 +12,17 @@
   const svg = d3.select("#tree")
     .append("svg")
       .attr("width",  fullW)
-      .attr("height", fullH)
-      .call(d3.zoom()
-        .scaleExtent([0.5, 4])
-        .on("zoom", e => g.attr("transform", e.transform))
-      );
+      .attr("height", fullH);
 
   const g = svg.append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  // zoom behavior
+  const zoom = d3.zoom()
+    .scaleExtent([0.5, 4])
+    .on("zoom", e => g.attr("transform", e.transform));
+
+  svg.call(zoom);
 
   // load JSON
   d3.json("/static/data/events.json").then(raw => {
@@ -27,7 +32,7 @@
     const stratify = d3.stratify()
       .id(d => d.id)
       .parentId(d => d.parent);
-    const root = stratify(raw);
+    root = stratify(raw);
 
     // horizontal = time scale
     const years = raw.map(d => d.year);
@@ -119,7 +124,7 @@
         .attr("transform", d => `translate(${d.y},${d.x})`)
         .style("cursor", d => d.data.wiki_link ? "pointer" : "default")
         .on("click", (event, d) => {
-          if (d.data.wiki_link) window.open(d.data.wiki_link, "_blank");
+          showModal(d.data);
         });
 
     nodeSelection.append("circle")
@@ -139,6 +144,10 @@
 
   // POST query to backend and highlight matched nodes by ID
   window.handleNaturalLanguageQuery = function(query) {
+    if (!root) {
+      alert("Tree is still loading. Please wait a moment and try again.");
+      return;
+    }
     fetch('/query', {
       method: "POST",
       headers: {
@@ -150,10 +159,68 @@
     .then(data => {
       const nodeIds = data.node_ids || [];
       d3.selectAll('.node').classed('highlight', d => nodeIds.includes(d.data.id));
+      if (nodeIds.length > 0) {
+        const nodeData = root.descendants().find(d => d.data.id === nodeIds[0]);
+        if (nodeData) {
+          zoomToNode(nodeData);
+        }
+      }
     })
     .catch(err => {
       console.error('Query failed:', err);
     });
   };
+
+  function zoomToNode(d) {
+    const scale = 1.5; 
+    const x = d.y;
+    const y = d.x;
+    svg.transition()
+      .duration(750)
+      .call(
+        zoom.transform,
+        d3.zoomIdentity
+          .translate(width / 2, height / 2)
+          .scale(scale)
+          .translate(-x, -y)
+      );
+  }
+
+  function showModal(data) {
+    document.getElementById('modal-title').textContent = data.name;
+    document.getElementById('modal-annotation').textContent = 'Loading summary...';
+    const link = document.getElementById('modal-link');
+    if (data.wiki_link) {
+      link.href = data.wiki_link;
+      link.style.display = '';
+      // Fetch summary from backend
+      fetch('/wiki_summary', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ wiki_link: data.wiki_link })
+      })
+      .then(res => res.json())
+      .then(res => {
+        document.getElementById('modal-annotation').textContent = res.summary;
+      })
+      .catch(() => {
+        document.getElementById('modal-annotation').textContent = 'Could not load summary.';
+      });
+    } else {
+      link.style.display = 'none';
+      document.getElementById('modal-annotation').textContent = data.annotation || '';
+    }
+    document.getElementById('node-modal').style.display = 'flex';
+  }
+
+  window.closeModal = function() {
+    document.getElementById('node-modal').style.display = 'none';
+    svg.transition().duration(750).call(
+      d3.zoom().transform,
+      d3.zoomIdentity
+    );
+  };
+
+  document.getElementById('query').disabled = false;
 
 })();
