@@ -3,7 +3,7 @@
   let root;
 
   const margin = { top: 50, right: 50, bottom: 50, left: 150 };
-  const fullW  = window.innerWidth;
+  const fullW  = window.innerWidth * 2;
   const fullH  = window.innerHeight;
   const width  = fullW  - margin.left - margin.right;
   const height = fullH - margin.top  - margin.bottom;
@@ -45,7 +45,7 @@
 
     // vertical spacing
     const tree = d3.tree()
-      .nodeSize([100, 500]) // increase horizontal spacing between nodes
+      .nodeSize([100, 700]) // increase horizontal spacing between nodes
       .separation((a, b) => a.parent === b.parent ? 1 : 1.5); // adjust separation between sibling and non-sibling nodes
 
     tree(root);
@@ -139,6 +139,24 @@
       .style("text-anchor", d => d.children ? "end" : "start")
       .text(d => d.data.name);
 
+    // Enable the search bar after tree is loaded
+    document.getElementById('query').disabled = false;
+
+    // Center the tree on the "technology" node at startup
+    const techNode = root.descendants().find(d => d.data.id === "technology");
+    if (techNode) {
+      const scale = 1.6;
+      const x = techNode.y;
+      const y = techNode.x;
+      svg.call(
+        zoom.transform,
+        d3.zoomIdentity
+          .translate(window.innerWidth / 2, window.innerHeight / 2)
+          .scale(scale)
+          .translate(-x, -y)
+      );
+    }
+
   })
   .catch(err => console.error("failed to load data:", err));
 
@@ -172,15 +190,15 @@
   };
 
   function zoomToNode(d) {
-    const scale = 1.5; 
+    const scale = 1.5;
     const x = d.y;
-    const y = d.x;
+    const y = d.x + margin.top;
     svg.transition()
       .duration(750)
       .call(
         zoom.transform,
         d3.zoomIdentity
-          .translate(width / 2, height / 2)
+          .translate(window.innerWidth / 2, window.innerHeight / 2)
           .scale(scale)
           .translate(-x, -y)
       );
@@ -220,7 +238,5 @@
       d3.zoomIdentity
     );
   };
-
-  document.getElementById('query').disabled = false;
 
 })();

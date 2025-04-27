@@ -13,13 +13,18 @@ body, html {
 
 .node text {
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   fill: white;
 }
 
 .x.axis path,
 .x.axis line {
   stroke: white;
+}
+
+.x.axis text {
+  font-size: 18px;
+  fill: #fff;
 }
 
 .node.highlight circle {
